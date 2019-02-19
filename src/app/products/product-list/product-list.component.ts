@@ -7,7 +7,6 @@ import { ProductService } from '../product.service';
 
 /* NgRx */
 import { Store, select } from '@ngrx/store';
-
 import * as fromProduct from '../state/product.reducer';
 import * as producActions from '../state/product.actions';
 import { takeWhile } from 'rxjs/operators';

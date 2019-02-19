@@ -18,7 +18,7 @@ import * as productActions from '../state/product.actions';
   templateUrl: './product-edit.component.html',
   styleUrls: ['./product-edit.component.css']
 })
-export class ProductEditComponent implements OnInit, OnDestroy {
+export class ProductEditComponent implements OnInit {
   pageTitle = 'Product Edit';
   errorMessage = '';
   productForm: FormGroup;
@@ -75,9 +75,7 @@ export class ProductEditComponent implements OnInit, OnDestroy {
 
   }
 
-  ngOnDestroy(): void {
-    this.sub.unsubscribe();
-  }
+
 
   // Also validate on blur
   // Helpful if the user tabs through required fields

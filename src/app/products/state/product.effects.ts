@@ -18,11 +18,6 @@ export class ProductEffects {
   @Effect()
   loadProducts$: Observable<Action> = this.actions$.pipe(
     ofType(productActions.ProductActionTypes.Load),
-    tap(
-      algo => console.log('algo-NEXT' , algo),
-      algo2 => console.log('algo-ERROR' , algo2),
-      () => console.log('algo-COMPLETE'),
-      ),
     mergeMap((action: productActions.Load)  =>
       this.productService.getProducts().pipe(
         map(products => (new productActions.LoadSuccess(products))), // esto despacha una actions
