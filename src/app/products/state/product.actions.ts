@@ -19,8 +19,6 @@ export enum ProductActionTypes {
   DeleteProduct = '[Product] Delete Product ',
   DeleteProductSuccess = '[Product] Delete Product Success',
   DeleteProductFail = '[Product] Delete Product Fail'
-
-
 }
 //#endregion
 
